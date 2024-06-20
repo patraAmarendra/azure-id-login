@@ -1,0 +1,89 @@
+@media (max-width: 991px) {
+	.form-box {
+		max-width: inherit;
+	}
+}
+
+@media (min-width: 992px) {
+	.form-box {
+		max-width: 500px;
+	}
+}
+
+body {
+	background: url('/assets/img/login-bg-min.jpeg');
+	-webkit-background-size: cover !important;
+	background-size: cover !important;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+}
+
+.form-box {
+	margin: 15vh auto 0;
+}
+
+.form-box img {
+	display: block;
+	padding: 15px 0;
+	margin: 0 auto;
+}
+
+.login-page .error {
+	padding: 5px 10px;
+	color: #444444;
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+
+.login-page .form-control {
+	transition: border 0.2s ease, background 0.2s ease;
+	border-radius: 0 !important;
+	margin-bottom: 20px;
+	font-size: 16px;
+	border-color: #d3d3d3;
+	height: inherit;
+	padding: 12px 10px;
+}
+
+.login-page .forgot-pass{
+	display:inline-block;
+	margin-bottom: 20px;
+	font-size: 13px;
+}
+
+.login-page .form-control::-moz-placeholder {
+	color: #777777;
+	opacity: 1;
+}
+
+.login-page .form-control:-ms-input-placeholder {
+	color: #777777;
+}
+
+.login-page .form-control::-webkit-input-placeholder {
+	color: #777777;
+}
+
+.login-page .form-control.ng-invalid {
+	border-color: #E26877;
+}
+
+.login-page .form-control.ng-invalid.ng-pristine,
+.login-page .form-control.ng-invalid:focus {
+	border-color: #d3d3d3;
+}
+
+.panel {
+	box-shadow: none;
+	border: none;
+	background-color: transparent;
+}
+
+a:focus {
+	outline: none !important;
+	background-image: none !important;
+	filter: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}

@@ -1,0 +1,24 @@
+
+extends layout
+
+block content
+  .background
+    .clearfix.login-page
+      .col-xs-12.col-sm-offset-3.col-sm-6.col-md-offset-4.col-md-4
+        #login-box.form-box
+          img(src = './images/logo.jpg', width='150px', alt='Amarendra logo')
+          div.panel.panel-default(style="margin: 20px 0 20px;")
+            div.panel-body(style='padding: 0;')
+            form( method="get", action="/auth/azure/login")
+              if redirect
+                input(type="hidden" name="redirect" value=redirect)
+              button(style="width:100%; background-color: rgb(90, 213, 184); border-radius: 4px; border:none; color: #FFFFFF; padding: 12px 5px; font-size: 10px; display: block; font-size: large; cursor: pointer" type="submit")#btn-login-azure.btn-default
+                  | Login with KPMG account
+          div.panel.panel-default(style="margin: 20px 0 20px;")
+            div.panel-body(style='padding: 0;')
+                div(id="forgot-pw", style="display:none" class="alert alert-warning")
+                  p Please contact support for a password reset at <a href="mailto:amarendrapatra14@gmail.com">amarendrapatra14@gmail.com</a>.
+                if error
+                  .alert.alert-danger(style="border-radius: 0;")
+                    p= error.message
+                <br>
